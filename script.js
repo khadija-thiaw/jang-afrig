@@ -79,3 +79,43 @@ return mot === inverse;
 }
 console.log(estPalindrome("kayak")); // true
 console.log(estPalindrome("Dakar")); // false
+const villes = ["Dakar", "Thiès", "Saint-Louis", "Ziguinchor"];
+console.log(villes[0]); //"Dakar"-> oncompteà partir de0 !
+console.log(villes[2]); //"Saint-Louis"
+console.log(villes.length); //4 (le nombred'éléments)
+villes.push("Touba"); //ajoute àla fin
+console.log(villes.length); //5
+villes.pop(); //retire ledernier
+console.log(villes.length); //4
+const ville = ["Dakar","Thiès","Saint-Louis"];
+villes.forEach((ville) => {
+console.log(`Ville : ${ville}`);
+});
+const prixFcfa = [656, 1312, 3280]; // des prix en FCFA
+const prixEuro = prixFcfa.map((p) => p / 656);
+console.log(prixEuro); // [1, 2, 5]
+console.log(prixFcfa); // [656, 1312, 3280]-> l'original n'a pas changé !
+const notes = [12, 7, 15, 9, 18, 10];
+const admis = notes.filter((note) => note >= 10);
+console.log(admis); // [12, 15, 18, 10]-> seulement les notes >= 10
+const etudiant = {
+nom: "Fatou",
+age: 20,
+ville: "Dakar"
+};
+console.log(etudiant.nom);
+// "Fatou"-> accès par le point
+console.log(etudiant.age);
+// 20
+console.log(etudiant["ville"]); // "Dakar"-> autre écriture, avec crochets
+const etudiants = [
+{ nom: "Fatou", note: 12 },
+{ nom: "Moussa", note: 8 },
+{ nom: "Awa", note: 15 }
+];
+// Parcourir et afficher chaque étudiant
+etudiants.forEach((e) => {
+console.log(`${e.nom} a eu ${e.note}/20`);
+});
+// Vue en tableau dans la console (très pratique pour vérifier)
+console.table(etudiants);
