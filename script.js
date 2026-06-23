@@ -33,7 +33,7 @@ function statutMajorite(age){
 return age>=18? "majeur" :"mineur";
 }
 console.log(statutMajorite(20)); //"majeur"
-const pays =["Sénégal", "Mali", "Ghana","Kenya"];
+const pays = ["Sénégal", "Mali", "Ghana","Kenya"];
 for (const nom of pays) {
 console.log(`Pays africain: ${nom}`);
 }
@@ -119,3 +119,11 @@ console.log(`${e.nom} a eu ${e.note}/20`);
 });
 // Vue en tableau dans la console (très pratique pour vérifier)
 console.table(etudiants);
+function choisirAuHasard(tableau) {
+const index = Math.floor(Math.random() * tableau.length);
+return tableau[index];
+}
+const Villes = ["Dakar", "Thiès", "Saint-Louis", "Ziguinchor"];
+console.log(choisirAuHasard(Villes)); // une ville différente à chaque appel
+console.table(pays);
+console.log(choisirAuHasard(Pays));
